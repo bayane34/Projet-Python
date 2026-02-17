@@ -297,7 +297,7 @@ def menu_principal():
             bibliotheque.sauvegarder()
             break
 
-
+# affiche le panneau de contrôle de l'utilisateur
 def menu_utilisateur():
     while True:
         print("\n=== MENU UTILISATEUR ===")
@@ -306,18 +306,23 @@ def menu_utilisateur():
         print("3. Voir les livres")
         print("4. Retour")
 
+        # récupère le choix
         choix = input_int("Choix : ")
 
         if choix == 1:
+            # demande le numéro de l'adhérent et le titre à l'utilisateur puis lance le processus d'emprunt
             bibliotheque.emprunter_livre(input("Num adhérent : "), input("Titre : "))
 
         elif choix == 2:
+            # demande le numéro de l'adhérent à l'utilisateur pour lister ses livres et gérer le retour
             bibliotheque.rendre_livre(input("Num adhérent : "))
 
         elif choix == 3:
+            # affiche simplement le catalogue complet de la bibliothèque
             bibliotheque.afficher_livres()
 
         elif choix == 4:
+            # casse la boucle pour quitter ce menu et revenir au menu principal
             break
 
 # affiche le panneau de contrôle de l'administrateur

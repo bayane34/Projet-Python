@@ -1,4 +1,56 @@
 {
-    "salles": [],
-    "reservations": []
+    "salles": [
+        {
+            "numero": "001",
+            "capacite": 30,
+            "disponible": true
+        },
+        {
+            "numero": "002",
+            "capacite": 30,
+            "disponible": true
+        },
+        {
+            "numero": "003",
+            "capacite": 40,
+            "disponible": true
+        },
+        {
+            "numero": "101",
+            "capacite": 20,
+            "disponible": true
+        },
+        {
+            "numero": "102",
+            "capacite": 16,
+            "disponible": true
+        },
+        {
+            "numero": "106",
+            "capacite": 31,
+            "disponible": true
+        },
+        {
+            "numero": "103",
+            "capacite": 20,
+            "disponible": true
+        },
+        {
+            "numero": "20",
+            "capacite": 10,
+            "disponible": true
+        },
+        {
+            "numero": "107",
+            "capacite": 9,
+            "disponible": true
+        }
+    ],
+    "reservations": [
+        {
+            "nom": "ISSA",
+            "numero": "001",
+            "date": "17-02-2026"
+        }
+    ]
 }

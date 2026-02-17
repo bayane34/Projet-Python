@@ -22,7 +22,7 @@
             "auteur": "Victor Hugo",
             "annee": 1862,
             "editeur": "Gallimard",
-            "nb_exemplaires": 1
+            "nb_exemplaires": 0
         },
         {
             "isbn": "978-2070368228",
@@ -74,26 +74,27 @@
                 "978-2070409181": {
                     "date_emprunt": "2026-02-06",
                     "date_limite": "2026-02-20"
+                },
+                "978-2-07-041311-9": {
+                    "date_emprunt": "17-02-2026",
+                    "date_limite": "03-03-2026"
                 }
-            }
-        },
-        {
-            "num_adherent": "002",
-            "nom": "Martin",
-            "prenom": "Sophie",
-            "livres_empruntes": {}
+            },
+            "historique": []
         },
         {
             "num_adherent": "003",
             "nom": "Durand",
             "prenom": "Alice",
-            "livres_empruntes": {}
+            "livres_empruntes": {},
+            "historique": []
         },
         {
             "num_adherent": "004",
             "nom": "Lefevre",
             "prenom": "Paul",
-            "livres_empruntes": {}
+            "livres_empruntes": {},
+            "historique": []
         }
     ]
 }

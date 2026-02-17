@@ -2,8 +2,7 @@ import json
 from datetime import datetime, timedelta
 
 
-# -------- FONCTION POUR LES ENTIERS --------
-
+# demande à l'utilisateur de saisir un entier, et repose la question si la valeur n'en est pas un
 def input_int(message):
     while True:
         try:
@@ -12,16 +11,20 @@ def input_int(message):
             print("Veuillez entrer un nombre valide.")
 
 
-# -------- ADMIN --------
-
+# partie admin
+# charge le mot de passe depuis le fichier admin.json
 def charger_admin():
     try:
+        # ouvre "admin.json" en mode lecture ("r")
         with open("admin.json", "r") as f:
+            # on va chercher l'information dans "password"
             return json.load(f)["password"]
+    # si le fichier "admin.json" n'existe pas dans notre ordinateur    
     except FileNotFoundError:
+        # on renvoit un mot de passe par défaut de secours
         return "admin125"
 
-
+# 
 ADMIN_PASSWORD = charger_admin()
 
 

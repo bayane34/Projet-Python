@@ -222,6 +222,7 @@ class Bibliotheque:
 
 # partie emprunts
 
+    # vérifie l'adhérent et le stock puis valide l'emprunt en affichant la date limite de retour
     def emprunter_livre(self, num_adherent, titre):
         adherent = self.adherents.get(num_adherent)
 
@@ -240,6 +241,7 @@ class Bibliotheque:
             return
 
         if not adherent.emprunter(livre):
+            # annule l'emprunt côté livre si l'adhérent a déjà trop de livres
             livre.rendre()
             return
 
@@ -251,6 +253,7 @@ class Bibliotheque:
 
         self.sauvegarder()
 
+    # liste les livres de l'adhérent, calcule les éventuelles amendes de retard et enregistre le retour
     def rendre_livre(self, num_adherent):
         adherent = self.adherents.get(num_adherent)
 

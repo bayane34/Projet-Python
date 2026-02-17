@@ -37,6 +37,7 @@ def est_admin():
 #partie classe
 
 class Livre:
+    # initialise la classe livre
     def __init__(self, isbn, titre, auteur, annee, editeur, nb_exemplaires=1):
         self.isbn = isbn
         self.titre = titre
@@ -45,43 +46,50 @@ class Livre:
         self.editeur = editeur
         self.nb_exemplaires = nb_exemplaires
 
+    # diminue de 1 le stock
     def emprunter(self):
         if self.nb_exemplaires > 0:
             self.nb_exemplaires -= 1
             return True
         return False
 
+    # 
     def retirer(self):
         if self.nb_exemplaires > 0:
             self.nb_exemplaires -= 1
             return True
         return False
 
+    # rajoute 1 dans le stock
     def rendre(self):
         self.nb_exemplaires += 1
 
+    # transforme l'objet livre en dictionnaire
     def to_dict(self):
         return self.__dict__
 
 
 class Adherent:
     LIMITE_EMPRUNTS = 5
-
+    # initialise la classe adhérent
     def __init__(self, num_adherent, nom, prenom):
         self.num_adherent = num_adherent
         self.nom = nom
         self.prenom = prenom
         self.livres_empruntes = {}
 
+    # vérifie si l'adhérent peut encore emprunter un livre
     def peut_emprunter(self):
+        # len permet de compter les éléments d'une liste
         return len(self.livres_empruntes) < self.LIMITE_EMPRUNTS
 
+    # ajoute le livre à la liste des livres empruntés par l'adhérent avec une date de retour (+14 jours) si toutes les conditions sont réunies
     def emprunter(self, livre):
-
+        # vérifie si le livre a déjà été emprunté par l'adhérent
         if livre.isbn in self.livres_empruntes:
             print("Vous avez déjà emprunté ce livre.")
             return False
-
+        # vérifie si le quota est atteint
         if not self.peut_emprunter():
             print("Limite d'emprunts atteinte.")
             return False
@@ -96,6 +104,7 @@ class Adherent:
 
         return True
 
+    # 
     def rendre(self, livre):
         if livre.isbn in self.livres_empruntes:
             del self.livres_empruntes[livre.isbn]

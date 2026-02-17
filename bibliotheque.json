@@ -1,0 +1,99 @@
+{
+    "livres": [
+        {
+            "isbn": "978-3-16-148410-0",
+            "titre": "Le Petit Prince",
+            "auteur": "Saint-Exup\u00e9ry",
+            "annee": 1943,
+            "editeur": "Gallimard",
+            "nb_exemplaires": 1
+        },
+        {
+            "isbn": "978-2-07-036002-4",
+            "titre": "L'\u00c9tranger",
+            "auteur": "Albert Camus",
+            "annee": 1942,
+            "editeur": "Gallimard",
+            "nb_exemplaires": 1
+        },
+        {
+            "isbn": "978-2-07-041311-9",
+            "titre": "Les Mis\u00e9rables",
+            "auteur": "Victor Hugo",
+            "annee": 1862,
+            "editeur": "Gallimard",
+            "nb_exemplaires": 1
+        },
+        {
+            "isbn": "978-2070368228",
+            "titre": "Candide",
+            "auteur": "Voltaire",
+            "annee": 1759,
+            "editeur": "Gallimard",
+            "nb_exemplaires": 1
+        },
+        {
+            "isbn": "978-2253004220",
+            "titre": "Le Rouge et le Noir",
+            "auteur": "Stendhal",
+            "annee": 1830,
+            "editeur": "Gallimard",
+            "nb_exemplaires": 1
+        },
+        {
+            "isbn": "978-2070409181",
+            "titre": "La Peste",
+            "auteur": "Albert Camus",
+            "annee": 1947,
+            "editeur": "Gallimard",
+            "nb_exemplaires": 0
+        },
+        {
+            "isbn": "978-2253006323",
+            "titre": "Madame Bovary",
+            "auteur": "Gustave Flaubert",
+            "annee": 1857,
+            "editeur": "Gallimard",
+            "nb_exemplaires": 1
+        },
+        {
+            "isbn": "978-2070612758",
+            "titre": "Harry Potter \u00e0 l'\u00e9cole des sorciers",
+            "auteur": "J.K. Rowling",
+            "annee": 1997,
+            "editeur": "Gallimard",
+            "nb_exemplaires": 1
+        }
+    ],
+    "adherents": [
+        {
+            "num_adherent": "001",
+            "nom": "Dupont",
+            "prenom": "Jean",
+            "livres_empruntes": {
+                "978-2070409181": {
+                    "date_emprunt": "2026-02-06",
+                    "date_limite": "2026-02-20"
+                }
+            }
+        },
+        {
+            "num_adherent": "002",
+            "nom": "Martin",
+            "prenom": "Sophie",
+            "livres_empruntes": {}
+        },
+        {
+            "num_adherent": "003",
+            "nom": "Durand",
+            "prenom": "Alice",
+            "livres_empruntes": {}
+        },
+        {
+            "num_adherent": "004",
+            "nom": "Lefevre",
+            "prenom": "Paul",
+            "livres_empruntes": {}
+        }
+    ]
+}

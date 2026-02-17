@@ -5,7 +5,7 @@ class Emprunt:
         self.livres = livres
 
     def emprunter(self, num_adherent, titre):
-        # vérifie si l'adhérent existe
+        # vérifie si l'adhérent existe sinon message erreur
         if num_adherent not in self.adherents:
             print("Adhérent non trouvé, vous n'êtes pas inscrit à la bibliothèque.")
             return
@@ -26,6 +26,7 @@ class Emprunt:
                     print("L'adhérent a emprunté son quota maximum de livres.")
                     return
 
+                # on ajoute le livre dans la liste des livres empruntés par l'adhérent
                 adherent['livres_empruntés'].append(titre)
                 livre['nb exemplaires'] -= 1
                 print("Votre emprunt est validé.")
@@ -34,17 +35,19 @@ class Emprunt:
         print("Ce livre n'est pas dans la bibliothèque.")
 
     def rendre(self, num_adherent, titre):
-        # vérifie si l'utilisateur existe 
+        # vérifie si l'adhérent existe sinon message d'erreur
         if num_adherent not in self.adherents:
             print("Adhérent non trouvé.")
             return
 
         adherent = self.adherents[num_adherent]
 
+        # vérifie si le livre a été emprunté par l'adhérent
         if titre not in adherent['livres_empruntés']:
             print("Cet adhérent n'a pas emprunté ce livre.")
             return
 
+        # retire le livre de la liste des livres empruntés par l'adhérent
         adherent['livres_empruntés'].remove(titre)
 
         # permet de "rendre" le livre dans l'inventaire 
